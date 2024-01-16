@@ -25,6 +25,7 @@ body {
   z-index: 999;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 .loader {
@@ -166,10 +167,10 @@ main {
   position: relative;
   height: fit-content;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
-  z-index: 99999;
+  /* z-index: 99999; */
 }
 
 .page1 .hero:nth-child(2) {
@@ -193,8 +194,6 @@ main {
   font-weight: 300;
   text-transform: uppercase;
   border-bottom: 5px solid white;
-  -webkit-text-stroke: 1px black;
-  transition: all ease 0.1s;
 }
 
 .page1 #hero3 h2:hover {
