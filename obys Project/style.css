@@ -16,13 +16,24 @@ body {
   display: none;
 }
 
+#cursor {
+  height: 2vw;
+  width: 2vw;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
 .loader {
   height: 100%;
   width: 100%;
   background-color: #000;
   padding: 20vh 10vw;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
 }
 
 .loader .line {
@@ -125,11 +136,102 @@ body {
 main {
   position: relative;
   background-color: #000;
-  /* z-index: 99; */
 }
 
-main .page1 {
+.page1 {
   height: 100vh;
   width: 100%;
   background-color: #222;
 }
+
+.page1 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw 6vw;
+}
+
+.page1 nav .nav-part2 {
+  display: flex;
+  gap: 30px;
+  font-family: "Poppins";
+  font-family: "Plain Light";
+  font-size: 1.1vw;
+  font-weight: 200;
+}
+
+.page1 .hero {
+  width: 73%;
+  margin-left: 27%;
+  position: relative;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 99999;
+}
+
+.page1 .hero:nth-child(2) {
+  margin-top: 5vw;
+}
+
+.page1 .hero h1 {
+  font-family: "Plain";
+  font-size: 6vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page1 #hero3 {
+  display: flex;
+}
+
+.page1 #hero3 h2 {
+  font-family: "Plain";
+  font-size: 6vw;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+  -webkit-text-stroke: 1px black;
+  transition: all ease 0.1s;
+}
+
+.page1 #hero3 h2:hover {
+  -webkit-text-stroke: 1px white;
+  color: black;
+  border-bottom: 5px solid transparent;
+}
+
+/* 
+.page1 #hero3 .container h2:hover {
+  -webkit-text-stroke: 1px white;
+  font-family: "Plain";
+  color: black;
+  font-size: 6vw;
+  text-transform: uppercase;
+  border-bottom: 5px solid transparent;
+} */
+
+/* 
+.page1 #hero1::before {
+  content: "01";
+  font-family: "Silk Serif";
+  font-size: 3.5vw;
+  position: absolute;
+  left: -10%;
+  top: 4.5%;
+  color: #ddd;
+  
+} 
+
+.page1 #hero4::before {
+  content: "Scroll";
+  font-family: "Plain";
+  font-size: 1vw;
+  position: absolute;
+  left: -28%;
+  top: 68%;
+  color: #ccc;
+  
+} */
