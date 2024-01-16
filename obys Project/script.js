@@ -1,6 +1,10 @@
 var body = document.querySelector("body");
 body.classList.add("hiding-scrollbar");
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 function disableScroll() {
   // Get the current page scroll position
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -61,7 +65,7 @@ function loader() {
     duration: 0.5,
   });
 
-  tl.from(".page1", {
+  tl.from(".page1 ", {
     delay: 0.1,
     y: 1600,
     duration: 0.5,
@@ -78,14 +82,9 @@ function loader() {
     y: 100,
     stagger: 0.2,
   });
-
-  // tl.to(".page1 #hero1::before , .page1 #hero4::before", {
-  //   opacity: 1,
-  // });
 }
 
 function cursorAnimation() {
-  // gsap.to(".page1 #hero4::before", {});
   document.addEventListener("mousemove", function (e) {
     gsap.to("#cursor", {
       left: e.x,
@@ -93,7 +92,36 @@ function cursorAnimation() {
     });
   });
 
-  Shery.makeMagnet(".nav-part2 h4" /* Element to target.*/, {});
+  // document
+  //   .querySelector("#video-container")
+  //   .addEventListener("mousemove", function (e) {
+  //     var rect = document
+  //       .querySelector("#video-container")
+  //       .getBoundingClientRect();
+
+  //     console.log(e.x, e.y);
+  //     console.log(rect);
+
+  // var x = e.x - rect.left;
+  // var y = e.y - rect.top;
+
+  // console.log(x, rect.left);
+  // console.log(y, rect.top);
+
+  // if (x < rect.left || x > rect.right) {
+  //   x = rect.left;
+  // }
+
+  // if (y < rect.top || y > rect.bottom) {
+  //   y = rect.top;
+  // }
+
+  // gsap.to("#video-cursor", {
+  //   left: x,
+  //   top: y,
+  // });
+  // });
+  Shery.makeMagnet(".nav-part2 h4", {});
 }
 
 disableScroll();

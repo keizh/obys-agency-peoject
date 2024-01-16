@@ -10,6 +10,7 @@ body {
   height: 100%;
   color: white;
   position: relative;
+  background-color: #000;
 }
 
 .hiding-scrollbar::-webkit-scrollbar {
@@ -142,7 +143,7 @@ main {
 .page1 {
   height: 100vh;
   width: 100%;
-  background-color: #222;
+  background-color: #151515;
 }
 
 .page1 nav {
@@ -154,7 +155,7 @@ main {
 
 .page1 nav .nav-part2 {
   display: flex;
-  gap: 30px;
+  gap: 4vw;
   font-family: "Poppins";
   font-family: "Plain Light";
   font-size: 1.1vw;
@@ -170,7 +171,6 @@ main {
   /* position: relative; */
   display: flex;
   align-items: center;
-  /* z-index: 99999; */
 }
 
 .page1 .hero:nth-child(2) {
@@ -194,6 +194,7 @@ main {
   font-weight: 300;
   text-transform: uppercase;
   border-bottom: 5px solid white;
+  transform: all 2;
 }
 
 .page1 #hero3 h2:hover {
@@ -234,3 +235,66 @@ main {
   color: #ccc;
   
 } */
+
+.page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  padding-top: 20vh;
+}
+
+.page2 #video-container {
+  position: relative;
+  height: 65vh;
+  width: 70vw;
+  left: 29.1%;
+}
+
+.page2 #video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page2 #video-container img {
+  position: absolute;
+  top: 0;
+  height: 101%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page2 #video-container #video-cursor {
+  height: 10vw;
+  width: 10vw;
+  /* border: px solid white; */
+  background-color: #ffa63d;
+  border-radius: 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.page2 #video-container #video-cursor i {
+  font-size: 50px;
+}
+
+.page3 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #151515;
+  background-color: #717171;
+}
+.page4 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #151515;
+  /* background-color: #717171; */
+}
