@@ -92,35 +92,41 @@ function cursorAnimation() {
     });
   });
 
-  // document
-  //   .querySelector("#video-container")
-  //   .addEventListener("mousemove", function (e) {
-  //     var rect = document
-  //       .querySelector("#video-container")
-  //       .getBoundingClientRect();
+  document
+    .querySelector("#video-container")
+    .addEventListener("mousemove", function (e) {
+      var div = document
+        .querySelector("#video-container")
+        .getBoundingClientRect();
 
-  //     console.log(e.x, e.y);
-  //     console.log(rect);
+      var rect = document
+        .querySelector("#video-cursor")
+        .getBoundingClientRect();
 
-  // var x = e.x - rect.left;
-  // var y = e.y - rect.top;
+      console.log(e.x, e.y);
 
-  // console.log(x, rect.left);
-  // console.log(y, rect.top);
+      console.log(div);
+      console.log(rect);
 
-  // if (x < rect.left || x > rect.right) {
-  //   x = rect.left;
-  // }
+      // var x = e.x - rect.left;
+      // var y = e.y - rect.top;
 
-  // if (y < rect.top || y > rect.bottom) {
-  //   y = rect.top;
-  // }
+      // console.log(x, rect.left);
+      // console.log(y, rect.top);
 
-  // gsap.to("#video-cursor", {
-  //   left: x,
-  //   top: y,
-  // });
-  // });
+      // if (x < rect.left || x > rect.right) {
+      //   x = rect.left;
+      // }
+
+      // if (y < rect.top || y > rect.bottom) {
+      //   y = rect.top;
+      // }
+
+      // gsap.to("#video-cursor", {
+      //   left: x,
+      //   top: y,
+      // });
+    });
   Shery.makeMagnet(".nav-part2 h4", {});
 }
 

@@ -8,9 +8,10 @@ html,
 body {
   width: 100%;
   height: 100%;
-  color: white;
+  color: #ffffff;
   position: relative;
   background-color: #000;
+  font-family: "Plain";
 }
 
 .hiding-scrollbar::-webkit-scrollbar {
@@ -23,7 +24,7 @@ body {
   border: 1.5px solid white;
   border-radius: 50%;
   position: fixed;
-  z-index: 999;
+  z-index: 50;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   pointer-events: none;
@@ -35,7 +36,7 @@ body {
   background-color: #000;
   padding: 20vh 10vw;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
 }
 
 .loader .line {
@@ -273,7 +274,7 @@ main {
   position: absolute;
   top: 0%;
   left: 0%;
-  z-index: 1000;
+  z-index: 199;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,4 +298,87 @@ main {
   position: relative;
   background-color: #151515;
   /* background-color: #717171; */
+}
+
+.page4 .page4-content {
+  width: 65vw;
+  margin-left: 28%;
+  position: relative;
+}
+
+.page4-content > h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.page4-content .under-line {
+  height: 1px;
+  width: 100%;
+  background-color: #ddd;
+  margin-top: 2vw;
+  margin-bottom: 3.5vw;
+}
+
+.page4-content > h2 {
+  font-size: 2.2vw;
+  font-weight: 300;
+  width: 52%;
+  margin-bottom: 4vw;
+}
+
+.page4-content .page4-flexed-content {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+}
+
+.page4-content .page4-flexed-content img {
+  width: 50%;
+}
+
+.page4-content .page4-flexed-content p {
+  font-size: 1.15vw;
+  font-weight: 300;
+  width: 33%;
+}
+
+.page4-content .blue-box {
+  background-color: #3f7df4;
+  height: fit-content;
+  width: 60%;
+  padding: 3.5vw 3.3vw;
+  position: relative;
+  margin-top: -13%;
+  margin-left: 35%;
+  /* margin-bottom: 10vw; */
+}
+
+.page4-content .blue-box .blue-elem {
+  display: flex;
+  align-items: baseline;
+  /* justify-content: space-between; */
+  gap: 1vw;
+  padding: 2vw 0vw;
+  border-bottom: 1px solid;
+}
+
+.blue-elem h1 {
+  font-size: 1.5vw;
+  width: 40%;
+}
+
+.blue-elem p {
+  font-size: 1vw;
+}
+
+.blue-box + .under-line {
+  margin-top: 10vw;
+  margin-bottom: 2vw;
+}
+
+.under-line + h6 {
+  font-size: 1vw;
+  font-weight: 300;
 }
