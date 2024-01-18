@@ -168,10 +168,30 @@ main {
   margin-left: 27%;
   position: relative;
   height: fit-content;
+  /* overflow: hidden; */
+
+  /* display: flex;
+  align-items: center; */
+}
+
+.page1 .container {
+  width: 100%;
+  /* margin-left: 27%; */
+  position: relative;
+  height: fit-content;
   overflow: hidden;
-  /* position: relative; */
   display: flex;
   align-items: center;
+}
+
+.page1 #hero1::before {
+  content: "01";
+  font-family: "Silk Serif";
+  font-size: 3.5vw;
+  position: absolute;
+  left: -10%;
+  top: 4.5%;
+  color: #ddd;
 }
 
 .page1 .hero:nth-child(2) {
@@ -203,39 +223,6 @@ main {
   color: black;
   border-bottom: 5px solid transparent;
 }
-
-/* 
-.page1 #hero3 .container h2:hover {
-  -webkit-text-stroke: 1px white;
-  font-family: "Plain";
-  color: black;
-  font-size: 6vw;
-  text-transform: uppercase;
-  border-bottom: 5px solid transparent;
-} */
-
-/* 
-.page1 #hero1::before {
-  content: "01";
-  font-family: "Silk Serif";
-  font-size: 3.5vw;
-  position: absolute;
-  left: -10%;
-  top: 4.5%;
-  color: #ddd;
-  
-} 
-
-.page1 #hero4::before {
-  content: "Scroll";
-  font-family: "Plain";
-  font-size: 1vw;
-  position: absolute;
-  left: -28%;
-  top: 68%;
-  color: #ccc;
-  
-} */
 
 .page2 {
   height: 100vh;
@@ -310,6 +297,17 @@ main {
   font-size: 8vw;
   font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+}
+
+.page4-content > h1::before {
+  content: "03";
+  font-family: "Silk Serif";
+  position: absolute;
+  font-size: 3vw;
+  color: white;
+  top: 11%;
+  left: -12%;
 }
 
 .page4-content .under-line {
@@ -381,4 +379,124 @@ main {
 .under-line + h6 {
   font-size: 1vw;
   font-weight: 300;
+}
+
+.page5 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #151515;
+
+  padding: 5vw 0;
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  overflow-x: scroll;
+  /* padding: 1vw 0; */
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+.marquee h1 {
+  flex-shrink: 0;
+  font-size: 7vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-weight: 200;
+  /* background-color: red; */
+  animation-name: roller;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  padding-left: 2vw;
+}
+
+.mq2 h1 {
+  animation-direction: reverse;
+}
+
+.marquee h1 span {
+  font-family: "Silk Serif";
+}
+@keyframes roller {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.page6 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #151515;
+  padding-top: 5vw;
+}
+
+.page6 .page6-content {
+  width: 65vw;
+  margin-left: 28%;
+  position: relative;
+}
+
+.page6 .page6-content > h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.page6 .page6-content > h1 span {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+
+.page6 .page6-content > h1::before {
+  content: "04";
+  font-family: "Silk Serif";
+  position: absolute;
+  font-size: 3vw;
+  color: white;
+  top: 4%;
+  left: -12%;
+}
+
+.page6 .page6-content .under-line {
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 1.5vw;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vw;
+}
+
+footer .column {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .column h3 {
+  font-size: 1vw;
+  padding: 3vw 0;
+}
+
+footer .column h4 {
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+.page6 .page6-content .under-line + h5 {
+  font-size: 1vw;
+  font-weight: 300;
+  padding: 3.2vw 0;
 }
