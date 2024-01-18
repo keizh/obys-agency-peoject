@@ -195,7 +195,7 @@ main {
 }
 
 .page1 .hero:nth-child(2) {
-  margin-top: 5vw;
+  margin-top: 2.5vw;
 }
 
 .page1 .hero h1 {
@@ -228,7 +228,7 @@ main {
   height: 100vh;
   width: 100%;
   background-color: #151515;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 .page2 #video-container {
@@ -260,7 +260,7 @@ main {
   border-radius: 50%;
   position: absolute;
   top: 0%;
-  left: 0%;
+  left: 70%;
   z-index: 199;
   display: flex;
   align-items: center;
@@ -499,4 +499,114 @@ footer .column h4 {
   font-size: 1vw;
   font-weight: 300;
   padding: 3.2vw 0;
+}
+
+/* PAGE 3 -----------------> */
+
+.page3 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #151515;
+  /* background-color: #717171; */
+  margin-bottom: 100vh;
+}
+
+.page3 > h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 65vw;
+  margin-left: 28%;
+  position: relative;
+}
+
+.page3 h1::before {
+  content: "03";
+  font-family: "Silk Serif";
+  position: absolute;
+  font-size: 3vw;
+  color: white;
+  top: 4%;
+  left: -12%;
+}
+
+.page3 .under-line {
+  height: 1px;
+  background-color: white;
+  width: 100%;
+  width: 65vw;
+  margin-left: 28%;
+}
+
+.page3 .image-container {
+  padding: 6vw 8vw;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.page3 .products {
+  flex-shrink: 0;
+  width: fit-content;
+  height: fit-content;
+  flex-shrink: 0;
+  padding: 0vw 3vw;
+}
+
+.page3 .products h2 {
+  font-size: 2vw;
+  padding: 2vw 0;
+}
+
+.page3 .products .images {
+  height: 50vh;
+  width: 20vw;
+}
+
+.page3 .products .images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page3 .arrow-pointer {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  /* background-color: red; */
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page3 .arrow-pointer svg {
+  height: 10vw;
+}
+
+.page3 .rotatum svg {
+  rotate: -60deg;
+}
+
+.page3 .products:nth-child(2) .images {
+  height: 70vh;
+  width: 30vw;
+}
+
+.page3 .arrow-pointer {
+  align-self: center;
+}
+
+.page3 .products:nth-child(3) h2 {
+  padding-top: 20vw;
+  padding-bottom: 15vw;
+}
+
+._canvas_container {
+  z-index: 999999 !important;
+  pointer-events: none;
 }
