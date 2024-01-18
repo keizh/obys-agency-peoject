@@ -131,7 +131,24 @@ function loader() {
   );
 }
 
+// function cursorAnimation() {
+//   document.addEventListener("mousemove", function (e) {
+//     gsap.to("#cursor", {
+//       left: e.x,
+//       top: e.y,
+//     });
+//   });
+
+//   Shery.makeMagnet(".nav-part2 h4", {});
+// }
+
 function cursorAnimation() {
+  // Shery.mouseFollower({
+  //   skew: true,
+  //   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  //   duration: 1,
+  // });
+
   document.addEventListener("mousemove", function (e) {
     gsap.to("#cursor", {
       left: e.x,
@@ -139,42 +156,55 @@ function cursorAnimation() {
     });
   });
 
-  document
-    .querySelector("#video-container")
-    .addEventListener("mousemove", function (e) {
-      var div = document
-        .querySelector("#video-container")
-        .getBoundingClientRect();
-
-      var rect = document
-        .querySelector("#video-cursor")
-        .getBoundingClientRect();
-
-      console.log(e.x, e.y);
-
-      console.log(div);
-      console.log(rect);
-
-      // var x = e.x - rect.left;
-      // var y = e.y - rect.top;
-
-      // console.log(x, rect.left);
-      // console.log(y, rect.top);
-
-      // if (x < rect.left || x > rect.right) {
-      //   x = rect.left;
-      // }
-
-      // if (y < rect.top || y > rect.bottom) {
-      //   y = rect.top;
-      // }
-
-      // gsap.to("#video-cursor", {
-      //   left: x,
-      //   top: y,
-      // });
-    });
   Shery.makeMagnet(".nav-part2 h4", {});
+
+  var videoContainer = document.querySelector("#video-container");
+  var video = document.querySelector("#video-container video");
+  videoContainer.addEventListener("mouseenter", function () {
+    videoContainer.addEventListener("mousemove", function (dets) {
+      gsap.to("#cursor", {
+        opacity: 0,
+      });
+      gsap.to("#video-cursor", {
+        x: dets.x - 1000,
+        y: dets.y - 100,
+      });
+    });
+  });
+  videoContainer.addEventListener("mouseout", function () {
+    gsap.to("#cursor", {
+      opacity: 1,
+    });
+    gsap.to("#video-cursor", {
+      left: "70%",
+      top: "-15%",
+    });
+  });
+
+  var flag = 0;
+  videoContainer.addEventListener("click", function () {
+    if (flag == 0) {
+      video.play();
+      video.style.opacity = 1;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `<i class="ri-pause-mini-fill"></i>`;
+      gsap.to("#video-cursor", {
+        scale: 0.5,
+      });
+      flag = 1;
+    } else {
+      video.pause();
+      video.style.opacity = 0;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `<i class="ri-play-mini-fill"></i>`;
+      gsap.to("#video-cursor", {
+        scale: 1,
+      });
+      flag = 0;
+    }
+  });
 }
 
 function gooyeffect() {
@@ -217,8 +247,52 @@ function gooyeffect() {
   });
 }
 
+function watchvideo() {
+  document
+    .querySelector("#video-container")
+    .addEventListener("mouseenter", function () {
+      document
+        .querySelector("#video-container")
+        .addEventListener("mousemove", function (e) {
+          gsap.to("#video-cursor", {
+            x: e.x - 1000,
+            y: e.y - 150,
+          });
+        });
+    });
+
+  document
+    .querySelector("#video-container")
+    .addEventListener("enter", function () {
+      var flag = 0;
+      document
+        .querySelector("#video-container")
+        .addEventListener("click", function () {
+          var video = document.querySelector("#video-container video");
+          var videoContainer = document.querySelector("#video-container");
+          var videoCursor = document.querySelector("#video-cursor");
+          if (flag === 0) {
+            video.style.opacity = "1";
+            video.play();
+            videoCursor.innerHTML = '<i class="ri-pause-line"></i>';
+            gsap.to("#video-cursor", {
+              scale: 0.5,
+            });
+          } else {
+            video.style.opacity = "0";
+            video.pasue();
+            videoCursor.innerHTML = '<i class="ri-play-line"></i>';
+            gsap.to("#video-cursor", {
+              scale: 1,
+            });
+          }
+        });
+    });
+}
+
 disableScroll();
 loader();
 locomotiveJS();
 cursorAnimation();
 gooyeffect();
+// watchvideo();

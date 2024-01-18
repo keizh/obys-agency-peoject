@@ -236,20 +236,17 @@ main {
   height: 65vh;
   width: 70vw;
   left: 29.1%;
+  background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .page2 #video-container video {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-.page2 #video-container img {
-  position: absolute;
-  top: 0;
-  height: 101%;
-  width: 100%;
-  object-fit: cover;
+  opacity: 0;
+  position: relative;
 }
 
 .page2 #video-container #video-cursor {
@@ -261,11 +258,12 @@ main {
   position: absolute;
   top: 0%;
   left: 70%;
-  z-index: 199;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .page2 #video-container #video-cursor i {
@@ -434,7 +432,7 @@ main {
 
 .page6 {
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   position: relative;
   background-color: #151515;
   padding-top: 5vw;
@@ -490,6 +488,12 @@ footer .column h3 {
   padding: 3vw 0;
 }
 
+footer .column .cage {
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
 footer .column h4 {
   font-size: 2vw;
   font-weight: 300;
@@ -501,6 +505,13 @@ footer .column h4 {
   padding: 3.2vw 0;
 }
 
+.page6 .page6-content .under-line + .final-flex {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+}
+
 /* PAGE 3 -----------------> */
 
 .page3 {
@@ -509,7 +520,7 @@ footer .column h4 {
   position: relative;
   background-color: #151515;
   /* background-color: #717171; */
-  margin-bottom: 100vh;
+  /* margin-bottom: 100vh; */
 }
 
 .page3 > h1 {
@@ -547,6 +558,7 @@ footer .column h4 {
   flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
+  gap: 1vw;
 }
 
 .page3 .products {
@@ -599,6 +611,7 @@ footer .column h4 {
 
 .page3 .arrow-pointer {
   align-self: center;
+  position: relative;
 }
 
 .page3 .products:nth-child(3) h2 {
@@ -609,4 +622,32 @@ footer .column h4 {
 ._canvas_container {
   z-index: 999999 !important;
   pointer-events: none;
+}
+
+.arrow-pointer .circle-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  scale: 0;
+  transition: all ease 0.5s;
+  transition-delay: 0.3s;
+}
+
+.arrow-pointer .circle-text p {
+  width: 70%;
+  font-size: 1vw;
+  scale: 0;
+}
+
+.arrow-pointer:hover .circle-text,
+.arrow-pointer:hover .circle-text p {
+  scale: 1;
 }
