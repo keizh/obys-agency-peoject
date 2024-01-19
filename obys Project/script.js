@@ -127,7 +127,7 @@ function loader() {
     {
       opacity: 0,
     },
-    "+=1"
+    "+=.5"
   );
 }
 
