@@ -652,6 +652,37 @@ footer .column h4 {
   scale: 1;
 }
 
+.flexed-all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  /* padding: 5vh 0; */
+  /* margin-bottom: 5vh; */
+}
+
+.all-projects {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  background-color: orange;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.2s;
+  transition-delay: 0.1s;
+}
+
+.all-projects:hover {
+  scale: 0.8;
+}
+
+.all-projects p {
+  font-family: "Silk Serif";
+}
+
 @media (max-width: 600px) {
   /* loader done */
 
@@ -1011,6 +1042,37 @@ footer .column h4 {
   .arrow-pointer:hover .circle-text,
   .arrow-pointer:hover .circle-text p {
     scale: 1;
+  }
+
+  .flexed-all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    /* padding: 5vh 0; */
+    /* margin-bottom: 5vh; */
+  }
+
+  .all-projects {
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    background-color: orange;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.2s;
+    transition-delay: 0.1s;
+  }
+
+  .all-projects:hover {
+    scale: 0.8;
+  }
+
+  .all-projects p {
+    font-family: "Silk Serif";
   }
 
   /* page 4 */
