@@ -784,7 +784,7 @@ footer .column h4 {
     font-size: 7vw;
     position: absolute;
     left: 0%;
-    top: -100%;
+    top: -80%;
     color: #ddd;
   }
 
@@ -821,17 +821,18 @@ footer .column h4 {
   /* page2 start */
 
   .page2 {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background-color: #151515;
     padding-top: 10vh;
+    /* padding-bottom: 10vh; */
   }
 
   .page2 #video-container {
     position: relative;
-    height: 65vh;
-    width: 70vw;
-    left: 29.1%;
+    height: 55vh;
+    width: 100vw;
+    left: 0;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
     background-size: cover;
     background-position: center;
@@ -846,14 +847,14 @@ footer .column h4 {
   }
 
   .page2 #video-container #video-cursor {
-    height: 10vw;
-    width: 10vw;
+    height: 20vw;
+    width: 20vw;
     /* border: px solid white; */
     background-color: #ffa63d;
     border-radius: 50%;
     position: absolute;
-    top: 0%;
-    left: 70%;
+    top: 50%;
+    left: 50%;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -863,6 +864,408 @@ footer .column h4 {
   }
 
   .page2 #video-container #video-cursor i {
-    font-size: 50px;
+    font-size: 10vw;
+  }
+  /* page2 end */
+
+  /* page3 start */
+
+  /* PAGE 3 -----------------> */
+
+  /* done */
+  .page3 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #151515;
+    /* background-color: #717171; */
+    /* margin-bottom: 100vh; */
+    padding-top: 5vh;
+  }
+
+  /* done */
+  .page3 > h1 {
+    font-size: 8vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 65vw;
+    margin-left: 4vw;
+    position: relative;
+    padding-bottom: 4.5vh;
+  }
+
+  /* done */
+  .page3 h1::before {
+    content: "02";
+    font-family: "Silk Serif";
+    position: absolute;
+    font-size: 5vw;
+    color: white;
+    top: -50%;
+    left: 0%;
+  }
+
+  /* done */
+  .page3 .under-line {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    width: 90vw;
+    margin-left: 4vw;
+  }
+
+  .page3 .image-container {
+    padding: 6vw 8vw;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+  }
+
+  .page3 .products {
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    flex-shrink: 0;
+    padding: 0vw 3vw;
+  }
+
+  .page3 .products h2 {
+    font-size: 5vw;
+    padding: 2vw 0;
+  }
+
+  .page3 .products .images {
+    height: 60vh;
+    width: 90vw;
+  }
+
+  .page3 .products .images img {
+    height: 100%;
+    width: 100%;
+
+    object-position: center;
+  }
+
+  .page3 .arrow-pointer {
+    display: none;
+  }
+
+  .page3 .arrow-pointer svg {
+    height: 10vw;
+  }
+
+  .page3 .rotatum svg {
+    rotate: -60deg;
+  }
+
+  .page3 .products:nth-child(2) .images {
+    height: 70vh;
+    width: 30vw;
+  }
+
+  .page3 .arrow-pointer {
+    align-self: center;
+    position: relative;
+  }
+
+  .page3 .products:nth-child(3) h2 {
+    padding-top: 20vw;
+    padding-bottom: 15vw;
+  }
+
+  ._canvas_container {
+    z-index: 999999 !important;
+    pointer-events: none;
+  }
+
+  .arrow-pointer .circle-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+  }
+
+  .arrow-pointer .circle-text p {
+    width: 70%;
+    font-size: 1vw;
+    scale: 0;
+  }
+
+  .arrow-pointer:hover .circle-text,
+  .arrow-pointer:hover .circle-text p {
+    scale: 1;
+  }
+
+  /* page 4 */
+
+  .page4 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #151515;
+    /* background-color: #717171; */
+  }
+
+  .page4 .page4-content {
+    width: 90vw;
+    margin-left: 4vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page4-content > h1 {
+    font-size: 10vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 4vh;
+  }
+
+  .page4-content > h1::before {
+    content: "03";
+    font-family: "Silk Serif";
+    position: absolute;
+    font-size: 4.5vw;
+    color: white;
+    top: -60%;
+    left: 0%;
+  }
+
+  .page4-content .under-line {
+    height: 2px;
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 2vw;
+    margin-bottom: 3.5vw;
+  }
+
+  .page4-content > h2 {
+    padding-top: 5vh;
+    font-size: 6vw;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 4vw;
+  }
+
+  .page4-content .page4-flexed-content {
+    display: flex;
+    flex-direction: column-reverse;
+
+    width: 100%;
+    height: fit-content;
+    gap: 5vh;
+  }
+
+  .page4-content .page4-flexed-content img {
+    width: 100%;
+  }
+
+  .page4-content .page4-flexed-content p {
+    font-size: 3.5vw;
+    font-weight: 300;
+    width: 100%;
+  }
+
+  .page4-content .blue-box {
+    background-color: #3f7df4;
+    height: 75vh;
+    width: 100%;
+    padding: 3.5vw 5vw;
+    position: relative;
+    margin-top: 0%;
+    margin-left: 0%;
+    /* margin-bottom: 10vw; */
+  }
+
+  .page4-content .blue-box .blue-elem {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1vw;
+    padding: 4vh 0vw;
+    border-bottom: 1px solid;
+  }
+
+  .blue-elem h1 {
+    font-size: 4vw;
+    width: 40%;
+    font-weight: 300;
+  }
+
+  .blue-elem p {
+    font-size: 3.5vw;
+    width: 50%;
+    /* align-items: end; */
+    font-weight: 300;
+  }
+
+  .blue-box + .under-line {
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+  }
+
+  .under-line + h6 {
+    font-size: 4vw;
+    font-weight: 300;
+  }
+
+  /* page4 done */
+
+  /* page5 start */
+
+  .page5 {
+    width: 100%;
+    min-height: fit-content;
+    position: relative;
+    background-color: #151515;
+
+    padding: 8vh 0;
+  }
+
+  .marquee {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    /* padding: 1vw 0; */
+  }
+
+  .marquee::-webkit-scrollbar {
+    display: none;
+  }
+  .marquee h1 {
+    flex-shrink: 0;
+    font-size: 10vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 200;
+    /* background-color: red; */
+    animation-name: roller;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    padding-left: 2vw;
+  }
+
+  .mq2 h1 {
+    animation-direction: reverse;
+  }
+
+  .marquee h1 span {
+    font-family: "Silk Serif";
+  }
+  @keyframes roller {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* page 6 start */
+
+  .page6 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #151515;
+    padding-top: 5vw;
+  }
+
+  .page6 .page6-content {
+    width: 90vw;
+    margin-left: 4vw;
+    position: relative;
+  }
+
+  .page6 .page6-content > h1 {
+    font-size: 10vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 3.5vh;
+  }
+
+  .page6 .page6-content > h1 span {
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+  }
+
+  .page6 .page6-content > h1::before {
+    content: "04";
+    font-family: "Silk Serif";
+    position: absolute;
+    font-size: 4vw;
+    color: white;
+    top: -5%;
+    left: 0%;
+  }
+
+  .page6 .page6-content .under-line {
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 1.5vw;
+    margin-bottom: 3vh;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 4vw;
+    gap: 10vw;
+  }
+
+  footer .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .column h3 {
+    font-size: 3vw;
+    padding: 3vw 0;
+    font-weight: 400;
+  }
+
+  footer .column .cage {
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  footer .column h4 {
+    font-size: 6vw;
+    font-weight: 300;
+  }
+
+  .page6 .page6-content .under-line + h5 {
+    font-size: 1vw;
+    font-weight: 300;
+    padding: 0;
+  }
+
+  .page6 .page6-content .under-line + .final-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw 0 4vw 0;
+    justify-content: center;
   }
 }
