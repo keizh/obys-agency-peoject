@@ -936,7 +936,7 @@ footer .column h4 {
 
   .page3 .products h2 {
     font-size: 5vw;
-    padding: 2vw 0;
+    padding: 10vw 0 2vw 0;
   }
 
   .page3 .products .images {
@@ -964,8 +964,8 @@ footer .column h4 {
   }
 
   .page3 .products:nth-child(2) .images {
-    height: 70vh;
-    width: 30vw;
+    height: 60vh;
+    width: 90vw;
   }
 
   .page3 .arrow-pointer {
