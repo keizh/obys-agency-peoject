@@ -205,6 +205,41 @@ function cursorAnimation() {
       flag = 0;
     }
   });
+
+  // document
+  //   .querySelector(".page6-content h1")
+  //   .addEventListener("mouse", function () {
+  //     gsap.to(".page6-content h1", {
+  //       onStart: function () {
+  //         $(".to-animate").textillate({ in: { effect: "rollIn" } });
+  //       },
+  //     });
+  //   });
+
+  document.addEventListener("mousemove", function (e) {
+    gsap.to("#special-cursor", {
+      x: e.x,
+      y: e.y,
+    });
+  });
+
+  document
+    .querySelector("#hero3 #onlyfor3container ")
+    .addEventListener("mouseenter", function (e) {
+      document.querySelector("#special-cursor").style.transform =
+        "translate(-50%,-50%)";
+      gsap.to("#special-cursor", {
+        opacity: 1,
+      });
+    });
+
+  document
+    .querySelector("#hero3 #onlyfor3container ")
+    .addEventListener("mouseleave", function (e) {
+      gsap.to("#special-cursor", {
+        opacity: 0,
+      });
+    });
 }
 
 function gooyeffect() {
@@ -295,4 +330,4 @@ loader();
 locomotiveJS();
 cursorAnimation();
 gooyeffect();
-// watchvideo();
+watchvideo();

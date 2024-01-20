@@ -24,7 +24,7 @@ body {
   border: 1.5px solid white;
   border-radius: 50%;
   position: fixed;
-  z-index: 50;
+  z-index: 100;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
   pointer-events: none;
@@ -36,7 +36,7 @@ body {
   background-color: #000;
   padding: 20vh 10vw;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .loader .line {
@@ -145,6 +145,18 @@ main {
   height: 100vh;
   width: 100%;
   background-color: #151515;
+  position: relative;
+}
+
+#special-cursor {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  height: 25vw;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
 }
 
 .page1 nav {
@@ -207,6 +219,9 @@ main {
 
 .page1 #hero3 {
   display: flex;
+  position: relative;
+  z-index: 500;
+  /* background-color: red; */
 }
 
 .page1 #hero3 h2 {
@@ -789,19 +804,14 @@ footer .column h4 {
   }
 
   .page1 .hero {
-    width: 76%;
+    width: fit-content;
     margin-left: 4vw;
     position: relative;
     height: fit-content;
-    /* overflow: hidden; */
-
-    /* display: flex;
-  align-items: center; */
   }
 
   .page1 .container {
-    width: 100%;
-    /* margin-left: 27%; */
+    width: fit-content;
     position: relative;
     height: fit-content;
     overflow: hidden;
@@ -834,6 +844,11 @@ footer .column h4 {
     display: flex;
   }
 
+  .page1 #hero3 #onlyfor3container {
+    height: fit-content;
+    width: fit-content;
+  }
+
   .page1 #hero3 h2 {
     font-family: "Plain";
     font-size: 10vw;
@@ -845,7 +860,7 @@ footer .column h4 {
 
   .page1 #hero3 h2:hover {
     -webkit-text-stroke: 1px white;
-    color: black;
+    color: transparent;
     border-bottom: 5px solid transparent;
   }
 
