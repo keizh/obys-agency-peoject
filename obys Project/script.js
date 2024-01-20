@@ -229,7 +229,7 @@ function cursorAnimation() {
       document.querySelector("#special-cursor").style.transform =
         "translate(-50%,-50%)";
       gsap.to("#special-cursor", {
-        opacity: 1,
+        opacity: 0.7,
       });
     });
 

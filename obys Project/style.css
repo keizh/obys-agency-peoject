@@ -142,7 +142,7 @@ main {
 }
 
 .page1 {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-color: #151515;
   position: relative;
@@ -153,7 +153,7 @@ main {
   z-index: 50;
   top: 0;
   left: 0;
-  height: 25vw;
+  height: 35vw;
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0;
@@ -235,7 +235,7 @@ main {
 
 .page1 #hero3 h2:hover {
   -webkit-text-stroke: 1px white;
-  color: black;
+  color: transparent;
   border-bottom: 5px solid transparent;
 }
 
@@ -861,7 +861,7 @@ footer .column h4 {
   .page1 #hero3 h2:hover {
     -webkit-text-stroke: 1px white;
     color: transparent;
-    border-bottom: 5px solid transparent;
+    border-bottom: 5px solid #ffffff;
   }
 
   /* page2 start */
